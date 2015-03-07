@@ -1,0 +1,41 @@
+@import "../valo/valo.scss";
+
+$gray: #d1d1cf;
+$green: #40b527;
+$darkgreen: darken($green, 30%);
+
+// Prefix all selectors in your theme with .demo
+.demo {
+
+    // Include valo theme styles in your theme
+    @include valo;
+
+    // You can style your demo app right here
+    .demoContentLayout {
+      background-size: 90%;
+      background: $gray url(images/radial-gradient.png) no-repeat center center;
+    }
+
+    // You can also customize your component for the demo
+    // app, but remember that these styles are not part of
+    // the component. To include built-in CSS for your component,
+    // edit client/styles.css under java sources
+    div.layouts {
+        color: $green;
+        font-size: 50pt;
+        font-weight: bold;
+        text-shadow: 0 3px 0 $darkgreen,
+             0 14px 10px rgba(0,0,0,0.15),
+             0 24px 2px rgba(0,0,0,0.1),
+             0 34px 30px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .v-label {
+        border: 2px solid darkgreen;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+    }
+}
